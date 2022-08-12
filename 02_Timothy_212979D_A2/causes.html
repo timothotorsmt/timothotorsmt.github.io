@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Causes</title>
+
+    <!-- Used for "Stratos" text type (Adobe fonts) -->
+    <link rel="stylesheet" href="https://use.typekit.net/txn3bna.css">
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Icon (me) (also because i have too many tabs open and cannot tell which one is the proj) -->
+    <link rel="icon" href="./images/leaf_icon_light.png">
+
+    <!-- Javascript external link// run when code loads -->
+    <script src="./java/index.js" defer></script>
+</head>
+<body class = "body--dark">
+    <div class = "Header Header--dark">
+        <a href = "index.html" class = "header__logo"><img src = "Images/leaf_icon_light.png" alt = "Leaf Icon Light"></a>
+        <ul class = "navbar navbar--dark">
+            <li><a href = "index.html">home</a></li>
+            <li><a href = "causes.html" class = "header__active">causes</a></li>
+            <li><a href = "solutions.html">solutions</a></li>
+        </ul>
+        <div class = "header__divider"></div>
+    </div>
+    <div class = "causesContainer">
+        <div class = "causes__titleContainer">
+            <!-- Add background image later -->
+            <h3>now, the real question:</h3>
+            <h1>WHY IS THIS HAPPENING?</h1>
+            <h4>the causes, the problems, and the "why" this is happening.</h4>
+            <h4 class = "titleContainer--yellowcenter ">scroll to read more</h4>
+            <div class = "causes__toBlackTrans"></div>
+        </div>
+        <div class = "causes__globalWarming">
+            <div class = "globalWarming__header">
+                <h4>causes of climate change:</h4>
+                <h4 class = "num--yellow num--thin">01</h4>
+            </div>
+            <h2 class = "globalWarming--yellow scroll__elem rightToLeft">GLOBAL WARMING</h2>
+            <div class = "GW__content scroll__elem">
+                <p>The planet is slowly becoming hotter, increasing by 1 degree since the industrial era. This is due to <i>global warming</i>, or the long term warming of the earth's surface.
+                <br><br>In the video below, it shows the average temperatures from the 20th century, and how the temperature has started increasing rapidly.</p>
+            </div>
+            <div class = "globalWarming__climateSpiral scroll__elem">
+                <video muted loop autoplay>
+                    <source src="./videos/weather_spiral.mp4" type="video/mp4">
+                    Your browser does not support the video type.
+                </video>
+                <p class = "globalWarming__videoCredits">Video Credits: NASA</p>
+            </div>
+        </div>
+        <div class = "GreenhouseGases">
+            <div class = "GHG__Header">
+                <h4 class = "num--yellow num--thin">02</h4>
+                <h4>causes of climate change:</h4>
+            </div>
+            <h2 class = "GHG--yellow scroll__elem">GREENHOUSE<br>GASES</h2>
+            <div class = "GHG__Content scroll__elem">
+                <p>To put it simply, Greenhouse Gases are natural gases that trap heat. They allow sunlight to pass through the atmosphere, but they do not let the heat escape with the light.
+                    <br><br>In regular amounts, Greenhouse Gases make earth habitable, and provide us with heat. However, human activities have caused a spike in greenhouse gases, leading to global warming.
+                </p>
+            </div>
+        </div>
+        <div class = "GHGCauses">
+            <div class = "GC__Header scroll__elem">
+                <h2 class = "GCH--dark">Why is this happening?</h2>
+                <p class = "GCH--dark">The main gases that contribute to climate change.</p>
+            </div>
+            <div class = "Causes__icon" onclick="causes__molecules__reverse()">
+                <img src = "Images/X_icon.png" alt = "QuitIcon">
+            </div>
+            <div class = "GH_Types scroll__elem">
+                <div class = "Types__Carbon Types__Intro" onclick = "causes__molecules(1)">
+                    <img src = "Images/carbon.png" alt = "Carbon Dioxide Molecule" class = "Types__img">
+                    <h2>Carbon Dioxide</h2>
+                </div>
+                <div class = "Types__Carbon Types__Indepth">
+                    <div>
+                        <img src = "Images/carbon.png" alt = "Carbon Dioxide Molecule" class = "Types__img">
+                        <h2>Carbon Dioxide</h2>
+                    </div>
+                    <div>
+                        <p><i>Carbon Dioxide</i> (CO2) is the greenhouse gas emitted the most through human activities, making up for over 70% of all emissions.<br><br>It is most commonly emitted when fossil fuel and natural gases are burned. 
+                            Therefore, to reduce the amount of carbon dioxide in the air, we need to cut down on amount of fossil fuel used.</p>
+                    </div>
+                </div>
+                <div class = "Types__Meth Types__Intro" onclick = "causes__molecules(2)">
+                    <img src = "Images/methane.png" alt = "Methane Molecule" class = "Types__img">
+                    <h2>Methane</h2>
+                </div>
+                <div class = "Types__Meth Types__Indepth">
+                    <div>
+                        <img src = "Images/methane.png" alt = "Methane Molecule" class = "Types__img">
+                        <h2>Methane</h2>
+                    </div>
+                    <div>
+                        <p><i>Methane</i> (CH4) comes from the decomposition of plant matter, especially from forested areas such as rainforests, and rice paddies. It can also come from cattle.
+                            <br><br>Despite being less commmon than carbon dioxide, it has 25 times the global warming potential as compared to carbon dioxide.</p>
+                    </div>
+                </div>
+                <div class = "Types__NO Types__Intro" onclick = "causes__molecules(3)">
+                    <img src = "Images/nitrousOxide.png" alt = "Nitrous Oxide Molecule" class = "Types__img">
+                    <h2>Nitrous Oxide</h2>
+                </div>
+                <div class = "Types__NO Types__Indepth">
+                    <div>
+                        <img src = "Images/nitrousOxide.png" alt = "Nitrous Oxide Molecule" class = "Types__img">
+                        <h2>Nitrous Oxide</h2>
+                    </div>
+                    <div>
+                        <p><i>Nitrous Oxide</i> (N20) comes from the bacteria in soil, especially during modern agricultural practices such as lifestock management and tilling.
+                            <br><br>Nitrous oxide has a global warming potential that is 198 times higher than carbon dioxide, which makes it one of the most significant contributors to greenhouse gas emissions.</p>
+                    </div>
+                </div>
+                <div class = "Types__CFC Types__Intro" onclick = "causes__molecules(4)">
+                    <img src = "Images/cfc.png" alt = "Clorofluorocarbon Molecule" class = "Types__img">
+                    <h2>Clorofluorocarbons<br>(CFC)</h2>
+                </div>
+                <div class = "Types__CFC Types__Indepth">
+                    <div>
+                        <img src = "Images/cfc.png" alt = "Chloroflourocarbon Molecule" class = "Types__img">
+                        <h2>Chloroflourocarbon<br>(CFC)</h2>
+                    </div>
+                    <div>
+                        <p><i>Chloroflourocarbons</i> are the most recent of the bunch, coming exclusively from the industrial era. 
+                            <br><br>They are far less common as other greenhouse gases, but are extremely powerful, boasting a global warming potential of up to 10,000. It is also long lasting, able to remain in the atmosphere for 45-100 years.
+                            In fact, they are responsible for the destruction of the ozone layer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "GHG__You">
+            <div class = "scroll__elem">
+                <h2>Find out how much greenhouse gases you produce!</h2>
+                <h3>Take this quiz to find out how high your carbon footprint is.</h3>
+            </div>
+            <div class = "You__Container scroll__elem">
+                <!-- where all the questions are-->
+                <div class = "You__Questions">
+                    <div>
+                        <h5 class = "Questions__Number">Q1.</h5>
+                        <h4 class = "Questions__Text">What is your preferred mode of transport?</h4>
+
+                        <div>
+                            <button class="Questions--Next Questions__Button" onclick = "addQuestion()">Next Question</button>
+                            <button class="Questions--Submit Questions__Button" onclick = "SubmitList()">Submit Quiz</button>
+                        </div>
+                    </div>
+                    <!-- Write code to build custom quiz later -->
+                    <div class = "Questions__Choices">
+                    </div>
+                </div>
+                <div class = "You__Results">
+                    <h4>The Verdict is in:</h4>
+                    <h2 class = "Results__Main">**Replaced with results**</h2>
+                    <h4 class = "Results__Elab">**Replaced with elaboration**</h4>
+                    <button class="Results__Retake Questions__Button" onclick = "ResetQuiz()">Retake Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
