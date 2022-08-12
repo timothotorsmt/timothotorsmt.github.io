@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions</title>
+
+    <!-- Used for "Stratos" text type (Adobe fonts) -->
+    <link rel="stylesheet" href="https://use.typekit.net/txn3bna.css">
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Icon (me) (also because i have too many tabs open and cannot tell which one is the proj) -->
+    <link rel="icon" href="./images/leaf_icon_light.png">
+
+    <!-- Javascript external link// run when code loads -->
+    <script src="./java/index.js" defer></script>
+</head>
+<body>
+    <div class = "Header">
+        <a href = "index.html" class = "header__logo"><img src = "Images/leaf_icon_dark.png" alt = "Leaf Icon Dark"></a>
+        <ul class = "navbar">
+            <li><a href = "index.html">home</a></li>
+            <li><a href = "causes.html">causes</a></li>
+            <li><a href = "solutions.html" class = "header__active">solutions</a></li>
+        </ul>
+        <div class = "header__divider"></div>
+    </div>
+    <div class = "Solutions">
+        <div class = "Solutions__title">
+            <!-- Image here -->
+            <img src = "Images/132-Lost-in-the-woods.png" class="Solutions__img" alt = "Isometric people in woods">
+            <h1>what can i do to help?</h1>
+            <h4>small solutions to solve <br>our <u>biggest</u> problem</h4>
+        </div>
+        
+        <div class = "Solutions__atHome scroll__elem">
+            <div class = "Home__banner">
+                <h4>scenario 1:</h4>
+                <h2>AT HOME</h2>
+            </div>
+            <div class = "Home__Diorama">
+                <img src = "Images/IsometricKitchen.png" alt="Kitchen Isometric Diorama" class = "Solutions__KitchenImg">
+                <div class = "Solutions__Circle Solution__1" onclick="TipSelector(1)">
+                    <h5>1</h5>
+                    <div class = "Solution__tips">
+                        <h4>Green Energy!</h4>
+                        <p>Switch to more energy efficient appliances and contact your utility provider about green power schemes</p>
+                    </div>
+                </div>
+                <div class = "Solutions__Circle Solution__2" onclick="TipSelector(2)">
+                    <h5>2</h5>
+                    <div class = "Solution__tips">
+                        <h4>Green Thumbs!</h4>
+                        <p>Grow your own vegetables and produce at home! Not only is it fun to do gardening as a hobby, it reduces your carbon footprint as well!</p>
+                    </div>
+                </div>
+                <div class = "Solutions__Circle Solution__3" onclick="TipSelector(3)">
+                    <h5>3</h5>
+                    <div class = "Solution__tips">
+                        <h4>Green Diet?</h4>
+                        <p>Did you know that the carbon footprint of eating a cheeseburger is equal to 15 salads? Consuming less red meat and dairy is not only good for the environment, but your health too!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "Solutions__inPublic scroll__elem">
+            <div class = "Home__Diorama">
+                <img src = "Images/Park.png" alt="Park Isometric Diorama" class = "Home__ParkDiorama">
+                <div class = "Solutions__Circle Solution__4" onclick="TipSelector(4)">
+                    <h5>4</h5>
+                    <div class = "Solution__tips">
+                        <h4>Bicycle by Chungha</h4>
+                        <p>By Cycling, not only do you get more exercise, you can also reduce the amount of carbon dioxide emitted from the burning of fossil fuels.</p>
+                    </div>
+                </div>
+                <div class = "Solutions__Circle Solution__5" onclick="TipSelector(5)">
+                    <h5>5</h5>
+                    <div class = "Solution__tips">
+                        <h4>Donate to Charity!</h4>
+                        <p>If you have the funds for it, why not donate to charity? There are a few reputable charities, such as <a href = "https://www.wwf.sg" target = "_blank">WWF</a> or <a href = "https://www.crf.org.sg" target = "_blank">CRF</a>.</p>
+                    </div>
+                </div>
+                <div class = "Solutions__Circle Solution__6" onclick="TipSelector(6)">
+                    <h5>6</h5>
+                    <div class = "Solution__tips">
+                        <h4>Talk & Talk</h4>
+                        <p>Talk about climate change more with people! By engaging in conversations, we can spread awareness and get more attention on this issue.</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "Public__banner">
+                <h4>scenario 2:</h4>
+                <h2>IN PUBLIC</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
