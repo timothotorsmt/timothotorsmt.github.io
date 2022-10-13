@@ -200,6 +200,11 @@
     align-items: center;
 }
 
+.body--light .others__link:hover, .others__link:hover {
+    color:#DA1371;
+    font-weight: 700;
+}
+
 .others > div > h2, .others > div > a > h2 {
     font-family: nimbus-sans,sans-serif;
     font-weight: 200;
@@ -284,6 +289,15 @@
     width: 3vw;
     height: 3vw;
     transition: width 1s, height 1s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .others__socials > div > a > img {
+        width: 4vw;
+        height: 4vw;
+        transition: width 1s, height 1s;
+    }    
+
 }
 
 .others__socials > div > a:hover {
