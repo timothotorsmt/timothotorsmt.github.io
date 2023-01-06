@@ -1,0 +1,546 @@
+.SP {
+    width: 96vw;
+    height: 100vh;
+    margin: 0 2vw 0 2vw;
+    border: 0;
+    position: relative;
+
+    display:grid;
+    grid-template-rows: 25% 10% 65%;
+}
+
+.SP > h1{
+    font-weight: 200;
+    font-size: 5vw;
+    margin: 15vh 0 2vh 0;
+    align-self: end;
+}
+
+.SP > h2{
+    font-family: nimbus-sans, source-han-sans-simplified-c,sans-serif;
+    font-weight: 200;
+    font-size: 2vw;
+    align-self: start;
+    margin-top: 0;
+}
+
+.SP__menu {
+    display: grid;
+    grid-template-rows: 15% 60% 15%;
+}
+
+.SP__header {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    width: 100%;
+    align-items: center;
+}
+
+.SP__options, .SP__footer__options {
+    margin: 0.9vw 0.9vw;
+    border-color: #f5f5f5;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 0.15vw;
+    width: 90%;
+    justify-self: center;
+}
+
+.body--light .SP__options, .body--light .SP__footer__options {
+    border-color: #0F1A35;
+}
+
+.SP__footer__options:hover {
+    background-color: #f5f5f5;
+    color: #0F1A35;
+    transition: all 0.25s ease;
+}
+
+.SP__options--filled, .SP__footer__options--filled {
+    background-color: #f5f5f5;
+    color: #0F1A35;
+}
+
+.SP__options > h3, .SP__footer__options > h3 {
+    font-family: nimbus-sans, source-han-sans-simplified-c,sans-serif;
+    font-weight: 700;
+    font-size: 1.25vw;
+    text-align: center;
+    margin: 0;
+}
+
+.SP__searchBar > form {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    width: 100%;
+    align-items: start;
+}
+
+.SP__searchBar > form > button {
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+
+    background: url(../media/images/search.png);
+    background-size: cover;
+    background-color: #0F1A35;
+    align-self: center;
+    margin-left: 0.5vw;
+    border: 0;
+}
+
+.body--light .SP__searchBar > form > button {
+    background: url(../media/images/search_dark.png);
+    background-size: cover;
+    background-color: #f5f5f5;
+}
+
+.SP__searchBar > form > input[type=text] {
+    background-color: #0F1A35;
+    color:#f5f5f5;
+
+    font-family: nimbus-sans, source-han-sans-simplified-c,sans-serif;
+    font-weight: 200;
+    font-size: 1.25vw;
+
+    margin: 1vw 0.9vw;
+    margin-right: 0;
+    padding:0 1.75vw;
+    border-color: #f5f5f5;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 0.15vw;
+}
+
+.body--light .SP__searchBar > form > input[type=text] {
+    background-color: #f5f5f5;
+    color:#0F1A35;
+
+    border-color: #0F1A35;
+}
+
+.SP__projects {
+    display:flex;
+    flex-flow: row;
+    height: 100%;
+    width: 98%;
+    margin: 0 0.75vw;
+}
+
+.SP__project__item {
+    border-color: #f5f5f5;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 0.15vw;
+    margin: 0.25vw;
+    flex-grow: 1;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.body--light .SP__project__item {
+    border-color: #0F1A35;
+}
+
+.SP__project__image {
+    opacity: 0.6;   
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-width: 100%;
+    overflow:visible;
+}
+
+.project__item__preview {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    min-width: 10vw;
+    flex-grow: 3;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.project__item__preview > h2 {
+    margin: 1vw;
+}
+  
+
+.SP__project__item:hover:not(.SP__project--highlight) {
+    background-color: #f5f5f5;
+    color:#0F1A35;
+    transition: all 0.75s ease-out;
+}
+
+.body--light .SP__project__item:hover:not(.SP__project--highlight) {
+    background-color: #0F1A35;
+    color: #f5f5f5;
+}
+
+.project__item__full {
+    background: linear-gradient(to left, transparent 0%, #0F1A35 100%);
+    position: relative;
+    display:grid;
+    grid-template-columns: 65% 25%;
+    padding: 0vw 1vw;
+    grid-template-rows: 20% 20% 45% 10% 5%;
+    width: auto;
+    height: 100%;
+}
+
+.body--light .project__item__full {
+    background: linear-gradient(to left, transparent 0%, #f5f5f5 100%);
+}
+
+.project__item__full > .SP__project__image--full {
+    opacity: 0.8;   
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow:hidden;
+    z-index: -1;
+}
+
+.project__item__full > h2 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 3vw;
+}
+
+.project__item__full > h4 {
+    grid-column: 1;
+    grid-row: 2;
+
+    font-weight: 200;
+
+    font-size: 1.5vw;
+    padding: 0.5vw 0;
+}
+
+.project__item__full > p {
+    grid-column: 1;
+    grid-row: 3;
+    font-family: nimbus-sans, source-han-sans-simplified-c,sans-serif;
+    font-weight: 200;
+}
+
+.SP__project__tags {
+    display: flex;
+    grid-column: 1;
+    grid-row: 4;
+
+    align-items: center;
+}
+
+.SP__project__tags > p {
+    margin: 0.5vw 0.5vw;
+    border-color: #f5f5f5;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 0.15vw;
+    padding: 0.1vw 0.5vw;
+
+    font-family: nimbus-sans, source-han-sans-simplified-c,sans-serif;
+
+    background-color: #f5f5f5;
+    color:#0F1A35;
+}
+
+.body--light .SP__project__tags > p {
+    background-color: #0F1A35;
+    color: #f5f5f5;
+
+    border-color: #0F1A35;
+}
+
+.SP__project--highlight {
+    flex-basis: 75%;
+    animation: grow 1s ease-out;
+}
+
+@keyframes grow {
+    from {
+        flex-basis: 0;
+        opacity: 0;
+    }
+    to {
+        flex-basis: 75%;
+        opacity: 1;
+    }
+}
+
+
+.SP__footer {
+    display: grid;
+    grid-template-columns: 15% 15% 10% 45% 7% 7%;
+    align-items: center;
+}
+
+.footerButton {
+    display:flex;
+    align-self:center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
+.img__chevron, .body--light .footerButton:hover .img__chevron {
+    content: url(../media/images/chevron_light.png);
+}
+
+.body--light .img__chevron, .body--dark .footerButton:hover .img__chevron {
+    content: url(../media/images/chevron_dark.png);
+}
+
+.footerButton > img {
+    height: 1.5vw;
+}
+
+.flipped > img {
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 1100px) {
+    .SP > h1{
+        font-size: 5.5vw;
+        margin: 10vh 0 2vh 0;
+    }
+    
+    .SP > h2{
+        font-size: 2.5vw;
+    }
+
+    .SP__project__image, .project__item__full > img {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    /* change the buttons to be bigger purr*/
+    .SP__footer {
+        display: grid;
+        grid-template-columns: 19% 19% 12% 35% 7% 7%;
+        align-items: center;
+    }
+        
+    .footerButton > img {
+        height: 2vw;
+    }
+
+    .SP__options > h3, .SP__footer__options > h3 {
+        font-size: 1.75vw;
+    }
+    
+    .SP__searchBar > form > button {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    .SP__header {
+        display: grid;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .SP__searchBar > form > input[type=text] {
+        font-size: 1.75vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .SP {
+        grid-template-rows: 25% 5% 70%;
+    }
+
+    .SP > h1{
+        font-size: 6vw;
+        margin: 7vh 0 2vh 0;
+    }
+    
+    .SP > h2{
+        font-size: 3vw;
+    }
+
+    .SP__menu {
+        display: grid;
+        grid-template-rows: 10% 75% 15%;
+    }
+
+    /* change the buttons to be bigger purr*/
+    .SP__footer {
+        grid-template-columns: 24% 24% 15% 20% 8% 8%;
+    }
+        
+    .footerButton > img {
+        height: 2.75vw;
+    }
+
+    .SP__options > h3, .SP__footer__options > h3 {
+        font-size: 2.25vw;
+    }
+    
+    .SP__searchBar > form > button {
+        width: 2.75vw;
+        height: 2.75vw;
+    }
+
+    .SP__header {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .SP__searchBar > form > input[type=text] {
+        font-size: 2.25vw;
+    }
+
+    .project__item__full {
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 15% 15% 55% 10% 5%;
+    }
+
+    .project__item__full > h2 {
+        font-size: 4.5vw;
+    }
+    
+    .project__item__full > h4 {
+        font-size: 2vw;
+    } 
+}
+
+@media screen and (max-width: 650px) and (min-height: 700px) {
+    .SP {
+        grid-template-rows: 20% 5% 75%;
+    }
+
+    .SP > h1{
+        font-size: 6vw;
+        margin: 7vh 0 2vh 0;
+    }
+    
+    .SP > h2{
+        font-size: 3vw;
+    }
+
+    .SP__projects {
+        display:flex;
+        flex-flow: column;
+    }
+
+    .SP__project__image, .project__item__full > img {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    /* change the buttons to be bigger purr*/
+    .SP__footer {
+        grid-template-columns: 24% 24% 15% 20% 8% 8%;
+    }
+        
+    .footerButton > img {
+        height: 3.5vw;
+    }
+
+    .SP__options > h3, .SP__footer__options > h3 {
+        font-size: 3vw;
+    }
+
+    .SP__searchBar > form > button {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .SP__header {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .SP__searchBar > form > input[type=text] {
+        font-size: 3vw;
+    }
+
+    .project__item__full {
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 15% 15% 55% 15% 5%;
+    }
+    
+    .project__item__full > h2 {
+        font-size: 5vw;
+    }
+    
+    .project__item__full > h4 {
+        font-size: 2.5vw;
+    }    
+}
+
+@media screen and (max-width: 400px) and (min-height: 450px) {
+    .SP {
+        grid-template-rows: 20% 10% 100%;
+    }
+
+    .SP > h1{
+        font-size: 8vw;
+        margin: 7vh 0 2vh 0;
+    }
+    
+    .SP > h2{
+        font-size: 5vw;
+    }
+
+    .SP__projects {
+        display:flex;
+        flex-flow: column;
+    }
+
+    .SP__project__image, .project__item__full > img {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    /* change the buttons to be bigger purr*/
+    .SP__footer {
+        grid-template-columns: 26% 26% 17% 10% 10% 10%;
+    }
+        
+    .footerButton > img {
+        height: 4vw;
+    }
+
+    .SP__options > h3, .SP__footer__options > h3 {
+        font-size: 3.5vw;
+    }
+
+    .SP__searchBar > form > button {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .SP__header {
+        grid-template-columns: 25% 75%;
+    }
+    
+    .SP__searchBar > form > input[type=text] {
+        font-size: 3.5vw;
+    }
+
+    .project__item__full {
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 10% 10% 65% 15% 5%;
+        padding: 0vw 3vw;
+    }
+    
+    .project__item__full > h2 {
+        font-size: 6vw;
+    }
+    
+    .project__item__full > h4 {
+        font-size: 3vw;
+    }    
+}
