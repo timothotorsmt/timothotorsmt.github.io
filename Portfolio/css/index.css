@@ -1,3 +1,4 @@
+/* Title */
 .title {
     width: 100vw;
     height: 100vh;
@@ -5,7 +6,7 @@
     position: relative;
 }
 
-.title > img {
+.title > .title__background {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -15,7 +16,7 @@
     opacity: 50%;
 }
 
-.body--light .title > img {
+.body--light .title > .title__background {
     opacity: 30%;
 }
 
@@ -62,10 +63,136 @@
     border-color: #0F1A35;
 }
 
+.img__oval {
+    content: url(../media/images/oval.png);
+}
+
+.body--light .img__oval {
+    content: url(../media/images/oval_dark.png);
+}
+
+.title__oval {
+    position: absolute;
+    z-index: -2;
+    opacity: 0.7;
+}
+
+.body--light .title__oval {
+    opacity: 0.3;
+}
+
+
+.title__ball {
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+}
+
+.oval--1 {
+    transform: rotateZ(30deg);
+    left: 25vw;
+    top: 25vh;
+    width: 50vw;
+    height: auto;
+}
+
+.oval--2 {
+    transform: rotateZ(-25deg);
+    left: 35vw;
+    top: 20vh;
+    width: 30vw;
+    height: auto;
+}
+
+.ball--1 {
+    transform: rotateZ(-25deg);
+    left: 35vw;
+    top: 20vh;
+    width: 5vw;
+    height: auto;
+}
+
+.ball--2 {
+    transform: rotateZ(55deg);
+    left: 65vw;
+    top: 40vh;
+    width: 8vw;
+    height: auto;
+}
+
+/* About Me Responsive - Mobile*/
+@media screen and (max-height: 700px) and (min-width: 900px) {
+    .title__name {
+        grid-template-rows: 30% 20% 30% 10% 5%;
+    }
+
+    .title__name > h3 {
+        margin-top: 5vh;
+    }
+}
+
+
+@media screen and (max-width: 900px) {  
+    .title__name {
+        grid-template-rows: 30% 20% 30% 10% 5%;
+    }
+
+    .title__name > h4 {
+        font-size: 3vw;
+    }
+    
+    .title__name > h1 {
+        font-size: 8vw;
+    }
+    
+    .title__name > h3 {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .title__name > h4 {
+        font-size: 4vw;
+    }
+    
+    .title__name > h1 {
+        font-size: 10vw;
+    }
+    
+    .title__name > h3 {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .title__name > h4 {
+        font-size: 5vw;
+    }
+    
+    .title__name > h1 {
+        font-size: 12vw;
+    }
+    
+    .title__name > h3 {
+        font-size: 4vw;
+    }
+
+}
+
+/*=========================================*/
+/* Abour Me Section */
 .aboutMe {
     width: 100vw;
     display: grid;
     grid-template-columns: 60% 40%;
+}
+
+.aboutMe > img {
+    position: absolute;
+    width: 25vw;
+    margin: 20vw 0 0 18vw;
+    border-radius: 50px;
 }
 
 .aboutMe > div > h2:not(.about--red) {
@@ -114,15 +241,132 @@
     font-size: 1.4vw;
 }
 
+/* About Me Responsive - Mobile*/
+@media screen and (max-width: 900px) and (min-height: 700px) {
+    .aboutMe {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .aboutMe > div > h2:not(.about--red) {
+        font-size: 13vw;
+        line-height: 18vh;
+    }
+
+    .aboutMe > div > h2:first-of-type:not(.about--red) {
+        margin-top: 15vh;
+    }
+
+    .about--red {
+        font-size: 6vw;
+        margin: 10vh 10vw 1vh 10vw;
+    }
+
+    .aboutMe > div > p {
+        margin: 0 10vw 1vh 10vw;
+        font-size: 2vw;
+    }
+    
+    .aboutMe > img {
+        width: 40vw;
+        margin: 38vw 0 0 30vw;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-height: 700px) {
+    .aboutMe > div > h2:not(.about--red) {
+        font-size: 15vw;
+        line-height: 20vw;
+    }
+
+    .aboutMe > div > h2:first-of-type:not(.about--red) {
+        margin-top: 5vh;
+    }
+
+    .aboutMe > div > p {
+        margin: 0 10vw 1vh 10vw;
+        font-size: 2.5vw;
+    }
+}
+
+
+@media screen and (max-width: 600px) and (min-height: 600px) {
+    
+    .aboutMe > div > h2:not(.about--red) {
+        font-size: 15vw;
+        line-height: 15vh;
+    }
+
+    .aboutMe > div > h2:first-of-type:not(.about--red) {
+        margin-top:15vh;
+    }
+
+    .about--red {
+        font-size: 8vw;
+        margin: 10vh 10vw 1vh 10vw;
+    }
+
+    .aboutMe > div > p {
+        margin: 0 10vw 1vh 10vw;
+        font-size: 3vw;
+    }
+    
+    .aboutMe > img {
+        width: 60vw;
+        margin: 53vw 0 0 20vw;
+    }
+}
+
+@media screen and (max-width: 400px) and (min-height: 500px) {
+    .aboutMe {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+    .aboutMe > div > h2:not(.about--red) {
+        font-size: 15vw;
+        line-height: 15vh;
+    }
+
+    .aboutMe > div > h2:first-of-type:not(.about--red) {
+        margin-top: 10vh;
+    }
+
+    .about--red {
+        font-size: 8vw;
+        margin: 5vh 10vw 1vh 10vw;
+    }
+
+    .aboutMe > div > p {
+        margin: 0 10vw 1vh 10vw;
+        font-size: 4vw;
+    }
+    
+    .aboutMe > img {
+        margin: 53vw 0 0 20vw;
+    }
+}
+
+/*=========================================*/
+/* Skill Summary Section */
 .others {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap:2vw;
+    gap:1vw;
     width: 90vw;
-    margin: 10vw 5vw;
-    height: 80vh;
+    margin: 3vh 5vw;
+    margin-top: 10vh;
+    height: 75vh;
     margin-bottom: 1vh;
+}
+
+.others__title {
+    color:#DA1371;
+    font-size: 4vw;
+    margin: 1vh 2vw;
+    margin-bottom: 0.5vh;
+    grid-column: 1 / span 3;
+    grid-row: 1;
 }
 
 .others > div {
@@ -149,31 +393,42 @@
 
 .others__skills {
     grid-column: 1 / span 3;
+    grid-row: 2 / span 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20% 45% 35%;
+}
+.others__empty__1 {
+    grid-column: 4 / span 2;
+    grid-row: 4;
+}
+.others__empty__2 {
+    grid-column: 6;
+    grid-row: 4;
+}
+.others__empty__3 {
+    grid-row: 5;
+    grid-column: 1;
+}
+.others__empty__4 {
+    grid-row: 5;
+    grid-column: 5 / span 2;
+}
+
+.others__empty__5 {
+    grid-row: 6;
+    grid-column: 1 / span 2;
+}
+
+.others__softwares {
+    grid-column: 4 / span 3;
     grid-row: 1 / span 3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20% 40% 40%;
 }
-.others__empty__1 {
-    grid-column: 4 / span 2;
-}
-.others__empty__2 {
-    grid-column: 6;
-}
-.others__empty__3 {
-    grid-row: 4;
-    grid-column: 1 / span 3;
-}
-
-.others__softwares {
-    grid-column: 4 / span 3;
-    grid-row: 2 / span 3;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 20% 40% 40%;
-}
 .others__projects {
-    grid-column: 1 / span 6;
+    grid-column: 2 / span 3;
     grid-row: 5;
     display:grid;
     align-items: center;
@@ -187,11 +442,11 @@
 }
 
 .others__socials {
-    grid-column: 1 / span 5;
+    grid-column: 3 / span 3;
     grid-row: 6;
     display:grid;
     align-items: center;
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 50% 40%;
 }
 
 .others__link {
@@ -203,6 +458,7 @@
 .body--light .others__link:hover, .others__link:hover {
     color:#DA1371;
     font-weight: 700;
+    transition: color 0.25s;
 }
 
 .others > div > h2, .others > div > a > h2 {
@@ -230,10 +486,6 @@
     margin-left: 2vw;
 }
 
-@media only screen and (max-width: 1100px) {
-
-}
-
 .others > div > div > ul {
     font-family: nimbus-sans-extended,sans-serif;
     font-weight: 200;
@@ -243,7 +495,7 @@
     margin-left: 2vw;
 }
 
-.others__projects > a > h2 {
+.others__projects > a > h3 {
     justify-self: end;
 }
 .others__projects > a > .projects__line{
@@ -267,13 +519,14 @@
 
 .others__projects:hover > a >.projects__arrow {
     transform: translate(2vw, 0px);
+    transition: transform 0.25s;
 }
 
 .body--light .others__projects > a > .projects__line {
     background-color: #f5f5f5;
 }
 
-.others__socials > h2 {
+.others__socials > h3 {
     text-align: left;
     padding-left: 1vw;
 }
@@ -291,18 +544,10 @@
     transition: width 1s, height 1s;
 }
 
-@media only screen and (max-width: 1200px) {
-    .others__socials > div > a > img {
-        width: 4vw;
-        height: 4vw;
-        transition: width 1s, height 1s;
-    }    
-
-}
-
-.others__socials > div > a:hover {
+.others__socials > div > a:hover > img {
     width: 4vw;
     height: 4vw;
+    transition: width 1s, height 1s;
 }
 
 
@@ -310,7 +555,7 @@
     font-family: nimbus-sans-extended,sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 1.75vw;
+    font-size: 1.5vw;
     margin: 0;
     text-align: center;
     align-self: center;
@@ -318,6 +563,251 @@
 
 body > p {
     text-align: center;
-    margin-top: 4vh;
+    font-size: 1vh;
+    margin-top: 3vh;
     margin-bottom: 5vh;
+}
+
+/* Socials Responsive - Mobile*/
+@media screen and (max-width: 1300px) {
+    .others > div > h2, .others > div > a > h2 {
+        font-size: 2vw;
+    }
+    
+    .others > div > div > h4 {
+        font-size: 1.5vw;
+    }
+    
+    .others > div > div > ul {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .others {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        margin-top: 5vh;
+        height: 85vh;
+    }
+
+    .others__title {
+        font-size: 5.5vw;
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .others__skills {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 3;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 20% 45% 35%;
+    }
+
+    .others__empty__1 {
+        display: none;
+    }
+    .others__empty__2 {
+        grid-row: 9;
+        grid-column: 1;
+    }
+    .others__empty__3 {
+        grid-row: 8;
+        grid-column: 3;
+    }
+
+    .others__empty__4 {
+        grid-row: 10;
+        grid-column: 1 / span 2;
+    }
+    .others__empty__5 {
+        display: none;
+    }
+    
+    .others__softwares {
+        grid-column: 1 / span 3;
+        grid-row: 5 / span 3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 20% 40% 40%;
+    }
+    .others__projects {
+        grid-column: 1 / span 2;
+        grid-row: 8;
+        display:grid;
+        align-items: center;
+    }
+    
+    .others__projects > a {
+        display:grid;
+        grid-template-columns: 40% 40% 20%;
+        align-items: center;
+        transition: transform 2s;
+    }
+    
+    .others__socials {
+        grid-column: 2 / span 2;
+        grid-row: 9;
+        display:grid;
+        align-items: center;
+        grid-template-columns: 50% 40%;
+    }
+    
+    .others__link {
+        grid-column: 3;
+        grid-row: 10;
+    }
+    
+
+    .others > div > h2, .others > div > a > h2 {
+        font-size: 2.5vw;
+        padding: 0 2vw;
+        align-self: center;
+    }
+    
+    .others > div > div > h4 {
+        font-size: 1.5vw;
+        padding: 0 2vw;
+    }
+    
+    .others > div > div > ul {
+        font-size: 1.5vw;
+        padding: 0 4vw;
+    }
+
+    .others > div > h3, .others > div > a > h3 {
+        font-size: 2vw;
+        padding: 0 5vw;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-height: 700px) {
+    .others > div > h2, .others > div > a > h2 {
+        font-size: 2.75vw;
+    }
+    
+    .others > div > div > h4 {
+        font-size: 1.75vw;
+    }
+    
+    .others > div > div > ul {
+        font-size: 1.75vw;
+    }
+
+    .others > div > h3, .others > div > a > h3 {
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-height: 700px) {
+    .others__title {
+        font-size: 6vw;
+        grid-column: 1 / span 3;
+    }
+
+    .others > div > h2, .others > div > a > h2 {
+        font-size: 3.5vw;
+    }
+    
+    .others > div > div > h4 {
+        font-size: 2.25vw;
+    }
+    
+    .others > div > div > ul {
+        font-size: 2.25vw;
+    }
+
+    .others > div > h3, .others > div > a > h3 {
+        font-size: 2.5vw;
+    }
+
+    .others__socials > div > a > img {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .others__socials > div > a:hover > img {
+        width: 5vw;
+        height: 5vw;
+    }
+}
+
+@media screen and (max-width: 450px) and (min-height: 500px) {
+    .others {
+        margin-top: 5vh;
+        height: 100vh;
+    }
+    
+    .others > div > h2, .others > div > a > h2 {
+        font-size: 6vw;
+        padding: 0 5vw;
+    }
+    
+    .others > div > div > h4 {
+        font-size: 2.5vw;
+        padding: 0 5vw;
+    }
+    
+    .others > div > div > ul {
+        font-size: 2.5vw;
+        padding: 0 10vw;
+    }
+
+    .others > div > h3, .others > div > a > h3 {
+        font-size: 3.5vw;
+        padding: 0;
+    }
+    .others__socials > div > a > img {
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .others__socials > div > a:hover > img {
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
+@media screen and (max-width: 350px) and (min-height: 500px) {
+    .others__title {
+        font-size: 6.5vw;
+        grid-column: 1 / span 3;
+        align-self: center;
+    }
+
+    .others {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        margin-top: 5vh;
+        height: 90vh;
+    }
+
+    .others > div > h2, .others > div > a > h2 {
+        font-size: 6vw;
+        padding: 0 5vw;
+    }
+    
+    .others > div > div > h4 {
+        font-size: 2.75vw;
+        padding: 0 5vw;
+    }
+    
+    .others > div > div > ul {
+        font-size: 2.75vw;
+        padding: 0 10vw;
+    }
+
+    .others > div > h3, .others > div > a > h3 {
+        font-size: 3.5vw;
+        padding: 0;
+    }
+    .others__socials > div > a > img {
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .others__socials > div > a:hover > img {
+        width: 6vw;
+        height: 6vw;
+    }
 }
