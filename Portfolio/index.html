@@ -33,32 +33,36 @@
     <div class = "header">
         <div class = "header__menu">
             <h2>timothy luk :)</h2>
-            <div class = "header__menu__items"> <!--
-                <h3><span lang="en">About</span> <span lang="cn">关于我</span> <span lang="jp">私について</span></h3>
-                <h3><span lang="en">Projects</span> <span lang="cn">项目</span> <span lang="jp">プロジェクト</span></h3>
-            --></div>
+            <div class = "header__menu__items">
+                <h3><a href = "index.html"><span lang="en">About</span> <span lang="cn">关于我</span> <span lang="jp">私について</span></a></h3>
+                <h3><a href = "schoolProjects.html"><span lang="en">Projects</span> <span lang="cn">项目</span> <span lang="jp">プロジェクト</span></a></h3>
+            </div>
         </div>
         <div class = "whiteLine"></div>
         <div class = "header__others">
             <div class = "header__others__resume"><h3><span lang="en">resume</span> <span lang="cn">恢复</span> <span lang="jp">履歴書</span></h3></div>
-            <div class = "darkLightToggle"><img src = "media/images/moon.png"></div>
-            <div class = "LanguageSelect"><h3>en</h3></div>
+            <button class = "darkLightToggle"><img src = "media/images/moon.png"></button>
+            <button class = "LanguageSelect"><h3>en</h3></button>
         </div>
     </div>
     <div class = "title">
         <!-- replace with placeholder image for now -->
-        <img src = "media/images/placeholder.png">
+        <img class = "title__background" src = "media/images/placeholder.png">
         <div class = "title__name">
             <h4><span lang="en">Hi, I'm</span> <span lang="cn">嗨，我是</span> <span lang="jp">こんにちは、私は</span></h4>
             <h1>Timothy Luk</h1>
             <h3>
-                <span lang="en">game developer and computer graphics person</span> 
+                <span lang="en">aspiring game developer and computer graphics engineer</span> 
                 <span lang="cn">游戏开发者和计算机图形工程师</span> 
                 <span lang="jp">ゲーム開発者とコンピュータ グラフィックス エンジニア</span>
             </h3>
             <h4>scroll to see more me!</h4>
         </div>
         <!-- add decorations later x -->
+        <img class = "img__oval title__oval oval--1 scroll__elem--alt1">
+        <img class = "img__oval title__oval oval--2 scroll__elem--alt1">
+        <img class = "title__ball ball--1 scroll__elem--alt1" src = "media/images/ball.png">
+        <img class = "title__ball ball--2 scroll__elem--alt1" src = "media/images/ball.png">
     </div>
     <div class = "aboutMe">
         <div>
@@ -69,9 +73,10 @@
             <h2 class = "scroll__elem">about me!</h2>
             <h2 class = "scroll__elem">about me!</h2>
         </div>
+        <img src ="media/images/hottie.png" alt = "Image of me!" class = "scroll__elem">
         <div>
             <h2 class = "about--red">
-                <span lang="en">Hi!</span> 
+                <span lang="en">Hello, world!</span> 
                 <span lang="cn">你好！</span> 
                 <span lang="jp">こんにちは！</span>
             </h2>
@@ -83,6 +88,7 @@
         </div>
     </div>
     <div class = "others">
+        <h1 class = "others__title scroll__elem others__empty">Skills at a glance</h1>
         <div class = "others__skills others--filled scroll__elem">
             <h2 class = "others--marginTop">
                 <span lang="en">Skills</span> 
@@ -174,10 +180,10 @@
                 </ul>
             </div>
         </div>
-        <div class = "others__empty others__empty__1 scroll__elem">
+        <div class = "others__empty others__empty__2 scroll__elem">
             <h2> </h2>
         </div>
-        <div class = "others__empty others__empty__2 scroll__elem">
+        <div class = "others__empty others__empty__1 scroll__elem">
             <h2> </h2>
         </div>
         <div class = "others__softwares others--filled scroll__elem">
@@ -190,6 +196,19 @@
             <div></div>
             <div>
                 <h4>
+                    <span lang="en">Game Development Skills</span> 
+                    <span lang="cn">游戏开发技巧</span> 
+                    <span lang="jp">ゲーム開発力</span>
+                </h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Photon</li>
+                    <li>OpenGL</li>
+                    <li>Unreal Engine</li>
+                </ul>
+            </div>
+            <div>
+                <h4>
                     <span lang="en">Coding Languages</span> 
                     <span lang="cn">编码语言</span> 
                     <span lang="jp">コーディング言語</span>
@@ -197,19 +216,10 @@
                 <ul>
                     <li>C++ / C#</li>
                     <li>HTML, CSS, Javascript</li>
+                    <li>JQuery</li>
                     <li>Python</li>
                     <li>SQL</li>
-                </ul>
-            </div>
-            <div>
-                <h4>
-                    <span lang="en">Game Development Skills</span> 
-                    <span lang="cn">游戏开发技巧</span> 
-                    <span lang="jp">ゲーム開発力</span>
-                </h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>OpenGL</li>
+                    <li>PHP</li>
                 </ul>
             </div>
             <div>
@@ -232,21 +242,27 @@
         <div class = "others__empty others__empty__3 scroll__elem">
             <h2> </h2>
         </div>
-        <div class = "others__projects others--filled scroll__elem"><a href = "https://www.canva.com/design/DAFHY8YBbck/S8PdSGtOyPmoxYoW9LTpAQ/view?utm_content=DAFHY8YBbck&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target = "_blank">
-            <h2>
-                <span lang="en">Previous projects</span> 
+        <div class = "others__projects others--filled scroll__elem"><a href = "schoolProjects.html" target = "_self">
+            <h3>
+                <span lang="en">Project Showcase</span> 
                 <span lang="cn">以前做过的项目</span> 
-                <span lang="jp">以前に行ったプロジェクト</span>
-            </h2>
+                <span lang="jp">過去のプロジェクト</span>
+            </h3>
             <div class = "projects__line"></div>
             <div class = "projects__arrow"></div>
         </a></div>
+        <div class = "others__empty others__empty__4 scroll__elem">
+            <h2> </h2>
+        </div>
+        <div class = "others__empty others__empty__5 scroll__elem">
+            <h2> </h2>
+        </div>
         <div class = "others__socials others--filled scroll__elem">
-            <h2>
+            <h3>
                 <span lang="en">Contact Me!</span> 
                 <span lang="cn">联络我！</span> 
                 <span lang="jp">私に連絡して！</span>
-            </h2>
+            </h3>
             <div>
                 <a href = "https://www.linkedin.com/in/timothylukwt/" target="_blank"><img src="media/images/linkedin.png"></a>
                 <a href = "https://github.com/timothotorsmt" target="_blank"><img src="media/images/github.png"></a>
@@ -255,7 +271,7 @@
         </div>
         <div class = "others__link others--filled scroll__elem"><a href = "#Top">
             <h3>
-                <span lang="en">back to top</span> 
+                <span lang="en">Back to top</span> 
                 <span lang="cn">回到顶部</span> 
                 <span lang="jp">トップに戻る</span>
             </h3>
