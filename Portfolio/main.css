@@ -23,7 +23,7 @@ body {
 .whiteLine {
     height: 3px;
     background-color: #f5f5f5;
-    margin: 2vw;
+    margin: 2vw 1vw 2vw;
 }
 
 .body--light .whiteLine {
@@ -35,6 +35,42 @@ body {
     opacity: 0;
     transform: translate(-30vw, 0px);
     transition: transform 0.5s, opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.scroll__elem--alt {
+    animation: scrollAnim;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.scroll__elem--alt1 {
+    animation: scrollAnim__other;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes scrollAnim {
+    0% {
+        transform: translate(-10vw, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0vw, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes scrollAnim__other {
+    0% {
+        transform: translate(0, 30vw) rotateZ(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0vw, 0px) rotate();
+        opacity: 1;
+    }
 }
   
 .scroll__elem.inScreen {
@@ -104,21 +140,34 @@ body {
     justify-items: center;
 }
 
-.header__others > div {
+.body--dark .LanguageSelect > h3 {
+    color:#f5f5f5;
+}
+
+.header__others > button {
+    background-color: transparent;
+    border: 0;
+}
+
+.header__others > .header__others__resume {
+    justify-self: end;
+}
+
+.header__others > div, .header__others > button {
     padding: 0.5vw;
 }
 
-.header__others > div :hover {
+.header__others > div :hover, .header__others > button :hover {
     background-color: #f5f5f5;
     color: #0F1A35;
 }
 
-.body--light .header__others > div :hover {
+.body--light .header__others > div :hover, .body--light .header__others > button :hover {
     background-color: #0F1A35;
     color: #f5f5f5;
 }
 
-.header__others > div > h3 {
+.header__others > div > h3, .header__others > button > h3 {
     font-family: nimbus-sans-extended, sans-serif;
     font-weight: 200;
     font-size: 1.25vw;
@@ -132,7 +181,7 @@ body {
     border-width: 0.15vw;
 }
 
-.header__others > div > img {
+.header__others > button > img {
     width: 1.5vw;
     height: 1.5vw;
 
@@ -143,7 +192,134 @@ body {
     border-width: 0.15vw;
 }
 
-.body--light .header__others > div > h3, .body--light .header__others > div > img  {
+@media screen and (max-width: 1100px) {
+    .whiteLine {
+        height: 3px;
+        margin: 2vw 1vw 2vw;
+    }
+    
+    .header {
+        height: 5vh;
+        grid-template-columns: 50% 30% 20%;
+    }
+    
+    .header__menu > h2 {
+        font-size: 2.5vw;
+    }
+    
+    .header__menu__items > h3 {
+        font-size: 1.75vw;
+        padding: 0.3vw 0.5vw 0.3vw 0.5vw;
+    }
+    
+    .header__others > div > h3, .header__others > button > h3 {
+        font-size: 1.75vw;
+    }
+
+    .header__others > button > img {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .whiteLine {
+        height: 3px;
+        margin: 2vw 1vw 2vw;
+    }
+    
+    .header {
+        height: 5vh;
+        grid-template-columns: 55% 20% 25%;
+    }
+    
+    .header__menu > h2 {
+        font-size: 3vw;
+    }
+    
+    .header__menu__items > h3 {
+        font-size: 2.25vw;
+        padding: 0.3vw 0.5vw 0.3vw 0.5vw;
+    }
+    
+    .header__others > div > h3, .header__others > button > h3 {
+        font-size: 2.25vw;
+    }
+
+    .header__others > button > img {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .whiteLine {
+        height: 3px;
+        margin: 2vw 2vw 2vw;
+    }
+    
+    .header {
+        height: 6vh;
+        grid-template-columns: 70% 0 30%;
+    }
+    
+    .header__menu > h2 {
+        font-size: 3.5vw;
+    }
+    
+    .header__menu__items > h3 {
+        font-size: 2.75vw;
+        padding: 0.3vw 0.5vw 0.3vw 0.5vw;
+    }
+    
+    .header__others > div > h3, .header__others > button > h3 {
+        font-size: 2.75vw;
+    }
+
+    .header__others > button > img {
+        width: 3vw;
+        height: 3vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .whiteLine {
+        height: 3px;
+        margin: 2vw 2vw 2vw;
+    }
+
+    
+    .header {
+        height: 6vh;
+        grid-template-columns: 70% 0 30%;
+    }
+    
+    .header__menu > h2 {
+        font-size: 4vw;
+    }
+    
+    .header__menu__items > h3 {
+        font-size: 3.25vw;
+        padding: 0.3vw 0.5vw 0.3vw 0.5vw;
+    }
+
+    .header__others {
+        grid-template-columns: 50% 30% 20%;
+    }
+    
+    .header__others > div > h3, .header__others > button > h3 {
+        font-size: 3.25vw;
+    }
+
+    .header__others > button > img {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+}
+
+
+.body--light .header__others > div > h3, .body--light .header__others > div > img, 
+.body--light .header__others > button > h3, .body--light .header__others > button > img  {
     border-color: #0F1A35;
 }
 
