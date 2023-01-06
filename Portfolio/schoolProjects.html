@@ -5,6 +5,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="jquery-csv/jquery.csv.js"></script>
  
      <!-- Decoration -->
      <title>Portfolio</title>
@@ -12,7 +13,7 @@
  
      <!-- Typography -->
      <link rel="stylesheet" href="https://use.typekit.net/qki0zse.css">
-     <script>
+     <script>        
          (function(d) {
            var config = {
              kitId: 'dyb7qbw',
@@ -28,21 +29,132 @@
      <link rel="stylesheet" type="text/css" href="css/schoolProjects.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="main.js" defer></script>
+     <script src="projects.js" defer></script>
 </head>
 <body class = "body--dark">
     <div class = "header">
         <div class = "header__menu">
             <h2>timothy luk :)</h2>
             <div class = "header__menu__items">
-                <h3><span lang="en">About</span> <span lang="cn">关于我</span> <span lang="jp">私について</span></h3>
-                <h3><span lang="en">Projects</span> <span lang="cn">项目</span> <span lang="jp">プロジェクト</span></h3>
+                <h3><a href = "index.html"><span lang="en">About</span> <span lang="cn">关于我</span> <span lang="jp">私について</span></a></h3>
+                <h3><a href = "schoolProjects.html"><span lang="en">Projects</span> <span lang="cn">项目</span> <span lang="jp">プロジェクト</span></a></h3>
             </div>
         </div>
         <div class = "whiteLine"></div>
         <div class = "header__others">
             <div class = "header__others__resume"><h3><span lang="en">resume</span> <span lang="cn">恢复</span> <span lang="jp">履歴書</span></h3></div>
-            <div class = "darkLightToggle"><img src = "media/images/moon.png"></div>
-            <div class = "LanguageSelect"><h3>en</h3></div>
+            <button class = "darkLightToggle"><img src = "media/images/moon.png"></button>
+            <button class = "LanguageSelect"><h3>en</h3></button>
+        </div>
+    </div>
+    <div class = "SP">
+        <h1 class = "SP__title">
+            <span lang="en">Project Showcase</span> 
+            <span lang="cn">以前做过的项目</span> 
+            <span lang="jp">以前に行ったプロジェクト</span>
+        </h1>
+        <h2>
+            <span lang="en">A personal collection of my proudest projects and achievements.</span> 
+            <span lang="cn">我所有最好和最自豪的项目和成就。</span> 
+            <span lang="jp">私の最高で最も誇りに思うプロジェクトと成果のすべて。</span>
+        </h2>
+        <div class = "SP__menu">
+            <div class = "SP__header">
+                <div class = "whiteLine"></div>
+                <div class = "SP__searchBar">
+                    <form class = "SP__searchBar__form">
+                        <input type="text" placeholder="Search for tags or project name.." name="search" id = "SP__searchBar" value="">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+            </div>
+            <div class = "SP__projects">
+                <div class = "SP__project__item" onclick="changeProject(0)">
+                    <div class = "project__item__preview">
+                        <img class = "SP__project__image" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                    </div>
+                    <div class = "project__item__full">
+                        <img class = "SP__project__image--full" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                        <h4>Project Subtitle</h4>
+                        <div class = "SP__project__tags">
+                            <p>tag</p>
+                        </div>
+                        <p>Project Description</p>
+                    </div>
+                </div>
+                <div class = "SP__project__item" onclick="changeProject(1)">
+                    <div class = "project__item__preview">
+                        <img class = "SP__project__image" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                    </div>
+                    <div class = "project__item__full">
+                        <img class = "SP__project__image--full" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                        <h4>Project Subtitle</h4>
+                        <div class = "SP__project__tags">
+                            <p>tag</p>
+                        </div>
+                        <p>Project Description</p>
+                    </div>
+                </div>
+                <div class = "SP__project__item" onclick="changeProject(2)">
+                    <div class = "project__item__preview">
+                        <img class = "SP__project__image" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                    </div>
+                    <div class = "project__item__full">
+                        <img class = "SP__project__image--full" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                        <h4>Project Subtitle</h4>
+                        <div class = "SP__project__tags">
+                            <p>tag</p>
+                        </div>
+                        <p>Project Description</p>
+                    </div>
+                </div>
+                <div class = "SP__project__item" onclick="changeProject(3)">
+                    <div class = "project__item__preview">
+                        <img class = "SP__project__image" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                    </div>
+                    <div class = "project__item__full">
+                        <img class = "SP__project__image--full" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                        <h4>Project Subtitle</h4>
+                        <div class = "SP__project__tags">
+                            <p>tag</p>
+                        </div>
+                        <p>Project Description</p>
+                    </div>
+                </div>
+                <div class = "SP__project__item" onclick="changeProject(4)">
+                    <div class = "project__item__preview">
+                        <img class = "SP__project__image" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                    </div>
+                    <div class = "project__item__full">
+                        <img class = "SP__project__image--full" src = "media/images/placeholder.png">
+                        <h2>Project Name</h2>
+                        <h4>Project Subtitle</h4>
+                        <div class = "SP__project__tags">
+                            <p>tag</p>
+                        </div>
+                        <p>Project Description</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class = "SP__footer">
+                <div class = "SP__footer__options SP__footer__options--filled" onclick="changeTab(0)"><h3><span lang="en">Academic Projects</span><span lang="cn">学术项目</span><span lang="jp">学術プロジェクト</span></h3></div>
+                <div class = "SP__footer__options" onclick="changeTab(1)"><h3><span lang="en">Personal Projects</span><span lang="cn">激情项目</span><span lang="jp">情熱プロジェクト</span></h3></div>
+                <div class = "SP__footer__options" onclick="changeTab(2)"><h3><span lang="en">Other Stuff</span><span lang="cn">其他东西</span><span lang="jp">他のもの</span></h3></div>
+                <div class = "whiteLine"></div>
+                
+                <div class = "SP__footer__options" ><button class = "footerButton footer--prev"><img class = "img__chevron"></button></div>
+                <div class = "SP__footer__options" ><button class = "footerButton flipped footer--next"><img class = "img__chevron"></button></div>
+            </div>
         </div>
     </div>
 </body>
