@@ -150,17 +150,21 @@
     top: 0;
     height: 100%;
     min-width: 100%;
-    overflow:visible;
+
 }
 
 .project__item__preview {
     display: flex;
     align-items: flex-end;
     height: 100%;
-    min-width: 10vw;
+    width: 100%;
     flex-grow: 3;
     flex-shrink: 1;
     flex-basis: auto;
+}
+
+.project__item__preview > img {
+    object-fit: cover;   
 }
 
 .project__item__preview > h2 {
@@ -206,13 +210,13 @@
 }
 
 .project__item__full > h2 {
-    grid-column: 1;
+    grid-column: 1 / span 2;
     grid-row: 1;
     font-size: 3vw;
 }
 
 .project__item__full > h4 {
-    grid-column: 1;
+    grid-column: 1 / span 2;
     grid-row: 2;
 
     font-weight: 200;
@@ -259,7 +263,7 @@
 
 .SP__project--highlight {
     flex-basis: 75%;
-    animation: grow 1s ease-out;
+    animation: grow 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes grow {
