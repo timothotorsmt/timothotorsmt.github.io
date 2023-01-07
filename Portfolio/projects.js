@@ -75,6 +75,9 @@ function loadData() {
                 var cell_data = objects_list[count].split("~");
                 var tempObj = Object.create(templateObj);
                 tempObj.tags = [];
+                if (cell_data == 0) {
+                    continue;
+                }
                 for(var cell_count=0; cell_count<cell_data.length; cell_count++)
                 {
                     switch (cell_count) {
@@ -114,6 +117,9 @@ function loadData() {
                 var cell_data = objects_list[count].split("~");
                 var tempObj = Object.create(templateObj);
                 tempObj.tags = [];
+                if (cell_data == 0) {
+                    continue;
+                }
                 for(var cell_count=0; cell_count<cell_data.length; cell_count++)
                 {
                     switch (cell_count) {
@@ -154,6 +160,9 @@ function loadData() {
                 var cell_data = objects_list[count].split("~");
                 var tempObj = Object.create(templateObj);
                 tempObj.tags = [];
+                if (cell_data == 0) {
+                    continue;
+                }
                 for(var cell_count=0; cell_count<cell_data.length; cell_count++)
                 {
                     switch (cell_count) {
